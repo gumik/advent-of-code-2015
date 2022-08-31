@@ -14,7 +14,7 @@ module Common (
     toTuple,
     toTriple) where
 import Numeric (readInt)
-import Data.List.Split (splitOn, splitEvery)
+import Data.List.Split (splitOn, chunksOf)
 import Data.Array
 
 data Solution a b = Solution {
@@ -62,7 +62,7 @@ showArray :: (Show a) => Array (Int, Int) a -> String
 showArray arr = let
     ((_, w1), (_, w2)) = bounds arr
     width = w2 - w1 + 1
-    in unlines $ splitEvery width $ concatMap show $ elems arr
+    in unlines $ chunksOf width $ concatMap show $ elems arr
 
 inArrayBounds arr (y, x) = let
     ((h0, w0), (hm, wm)) = bounds arr

@@ -1,8 +1,8 @@
 module Day04 ( solution ) where
 
 import Common (Solution(Solution), NoSolution(..), readNum)
-import Data.ByteString.Lazy.Char8 as BS (pack)
-import Data.Digest.Pure.MD5 (md5)
+import Data.ByteString.Char8 as BS (pack)
+import Distribution.Utils.MD5 (md5)
 import Control.Arrow (second)
 
 solution = Solution "day04" "The Ideal Stocking Stuffer" run

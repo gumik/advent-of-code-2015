@@ -30,7 +30,7 @@ library:
     # - mtl
     # - monad-loops
     - bytestring
-    - pureMD5
+    - Cabal
 
 executables:
   advent-of-code-exe:

@@ -55,11 +55,11 @@ library
   hs-source-dirs:
       src
   build-depends:
-      array
+      Cabal
+    , array
     , base
     , bytestring
     , containers
-    , pureMD5
     , split
   default-language: Haskell2010
 
