@@ -23,7 +23,7 @@ data Solution a b = Solution {
     solutionRun :: String -> (a, b)
 }
 
-data NoSolution = NoSolution
+data NoSolution = NoSolution deriving (Eq)
 instance Show NoSolution where
     show NoSolution = "(no solution)"
 
