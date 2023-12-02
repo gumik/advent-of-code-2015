@@ -31,11 +31,11 @@ import qualified Day25
 -- cases format is as follows:
 -- (part1, part2)
 -- where part1 and part2 are lists: [(expected1, in1), (expected2, in2), ...]
-exampleTest solution (part1Cases, part2Cases) = let 
+exampleTest solution (part1Cases, part2Cases) = let
     name = solutionName solution
     makeTest part tuplePart (input, expected) = part ~: input ~: expected ~=? tuplePart (solutionRun solution input)
     in
-    TestLabel name $ test [ 
+    TestLabel name $ test [
         test $ map (makeTest "part1" fst) part1Cases,
         test $ map (makeTest "part2" snd) part2Cases ]
 
@@ -96,7 +96,18 @@ day06part2 = [ ("turn on 0,0 through 999,999", 1000000)
                 "toggle 0,0 through 999,0\n" ++
                 "turn off 499,499 through 500,500\n", 1000000 + 2000 - 4) ]
 
-day07part1 = []
+day07part1 = [ ("123 -> x\n" ++
+                "456 -> y\n" ++
+                "x AND y -> a", 72)
+             , ("123 -> x\n" ++
+                "456 -> y\n" ++
+                "x OR y -> a", 507)
+             , ("123 -> x\n" ++
+                "x LSHIFT 2 -> a", 492)
+             , ("456 -> y\n" ++
+                "y RSHIFT 2 -> a", 114)
+             , ("123 -> x\n" ++
+                "NOT x -> a", 65412) ]
 day07part2 = []
 
 day08part1 = []

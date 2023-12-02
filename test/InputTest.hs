@@ -33,13 +33,13 @@ inputTest solution expected = let name = solutionName solution in
                                   assertEqual "" expected (solutionRun solution input))
 
 tests = TestLabel "InputTest" $ test
-    [ inputTest Day01.solution (232, 1783) 
+    [ inputTest Day01.solution (232, 1783)
     , inputTest Day02.solution (1606483, 3842356)
     , inputTest Day03.solution (2565, 2639)
     , inputTest Day04.solution (254575, 1038736)
     , inputTest Day05.solution (258, 53)
     , inputTest Day06.solution (400410, 15343601)
-    , inputTest Day07.solution (NoSolution, NoSolution)
+    , inputTest Day07.solution (0, NoSolution)
     , inputTest Day08.solution (NoSolution, NoSolution)
     , inputTest Day09.solution (NoSolution, NoSolution)
     , inputTest Day10.solution (NoSolution, NoSolution)
