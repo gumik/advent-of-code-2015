@@ -11,8 +11,13 @@ import Control.Monad.State
 
 solution = Solution "day07" "Some Assembly Required" run
 
-run input = (part1 circuit, NoSolution)
-    where circuit = parse input
+run input = let
+    circuit = parse input
+    circuitMap = circuitToMapByOutput circuit
+    part1 = evalState (getValue "a") circuitMap
+    circuitMap' = M.adjust (const $ Connection $ Number part1) "b" circuitMap
+    part2 = evalState (getValue "a") circuitMap'
+    in (part1, part2)
 
 type Circuit = [Wiring]
 type Identifier = String
@@ -57,9 +62,6 @@ parseSource s
     | all isDigit s = Number $ fromIntegral (readNum s)
     | otherwise     = Direct s
 
-part1 circuit = let
-    circuitMap = circuitToMapByOutput circuit
-    in evalState (getValue "a") circuitMap
 
 type CircuitMap = M.Map Output Input
 
