@@ -7,6 +7,7 @@ import Debug.Trace (traceShow)
 import Data.Bits ((.&.), (.|.), complement, shift)
 import qualified Data.Map.Strict as M
 import Data.Word (Word16)
+import Control.Monad.State
 
 solution = Solution "day07" "Some Assembly Required" run
 
@@ -58,23 +59,36 @@ parseSource s
 
 part1 circuit = let
     circuitMap = circuitToMapByOutput circuit
-    in getValue circuitMap "a"
+    in evalState (getValue "a") circuitMap
 
 type CircuitMap = M.Map Output Input
 
 circuitToMapByOutput :: Circuit -> CircuitMap
 circuitToMapByOutput = M.fromList . map (\(Wiring input output) -> (output, input))
 
-getValue :: CircuitMap -> Identifier -> Word16
-getValue circuitMap output = let
-    input = circuitMap M.! output in case input of
-        Connection source -> getSourceValue circuitMap source
-        And source1 source2 -> getSourceValue circuitMap source1 .&. getSourceValue circuitMap source2
-        Or source1 source2 -> getSourceValue circuitMap source1 .|. getSourceValue circuitMap source2
-        Shift source n -> shift (getSourceValue circuitMap source) n
-        Negation source -> complement (getSourceValue circuitMap source)
+getValue :: Identifier -> State CircuitMap Word16
+getValue output = do
+    input <- gets (M.! output)
+    value <- case input of
+        Connection source -> getSourceValue source
+        And source1 source2 -> do
+            val1 <- getSourceValue source1
+            val2 <- getSourceValue source2
+            return $ val1 .&. val2
+        Or source1 source2 -> do
+            val1 <- getSourceValue source1
+            val2 <- getSourceValue source2
+            return $ val1 .|. val2
+        Shift source n -> do
+            val <- getSourceValue source
+            return $ shift val n
+        Negation source -> do
+            val <- getSourceValue source
+            return $ complement val
+    modify $ M.adjust (const $ Connection $ Number value) output
+    return value
 
-getSourceValue :: CircuitMap -> Source -> Word16
-getSourceValue circuitMap source = case source of
-    Direct identifier -> getValue circuitMap identifier
-    Number n -> n
+getSourceValue :: Source -> State CircuitMap Word16
+getSourceValue source = case source of
+    Direct identifier -> getValue identifier
+    Number n -> return n
