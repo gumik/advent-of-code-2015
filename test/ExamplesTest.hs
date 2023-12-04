@@ -108,10 +108,19 @@ day07part1 = [ ("123 -> x\n" ++
                 "y RSHIFT 2 -> a", 114)
              , ("123 -> x\n" ++
                 "NOT x -> a", 65412) ]
-day07part2 = []
+day07part2 = [ ("c OR d -> a\n" ++
+                "0 -> b\n" ++
+                "b LSHIFT 1 -> c\n" ++
+                "1 -> d", 3)]
 
-day08part1 = []
-day08part2 = []
+day08part1 = [("\"\"\n" ++
+               "\"abc\"\n" ++
+               "\"aaa\\\"aaa\"\n" ++
+               "\"\\x27\"\n", 12)]
+day08part2 = [("\"\"\n" ++
+               "\"abc\"\n" ++
+               "\"aaa\\\"aaa\"\n" ++
+               "\"\\x27\"\n", 19)]
 
 day09part1 = []
 day09part2 = []
