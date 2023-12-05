@@ -122,8 +122,12 @@ day08part2 = [("\"\"\n" ++
                "\"aaa\\\"aaa\"\n" ++
                "\"\\x27\"\n", 19)]
 
-day09part1 = []
-day09part2 = []
+day09part1 = [ ("London to Dublin = 464\n"
+             ++ "London to Belfast = 518\n"
+             ++ "Dublin to Belfast = 141\n", 605) ]
+day09part2 = [ ("London to Dublin = 464\n"
+             ++ "London to Belfast = 518\n"
+             ++ "Dublin to Belfast = 141\n", 982)]
 
 day10part1 = []
 day10part2 = []
