@@ -132,7 +132,8 @@ day09part2 = [ ("London to Dublin = 464\n"
 day10part1 = []
 day10part2 = []
 
-day11part1 = []
+day11part1 = [ ("abcdefgh", "abcdffaa")
+             , ("ghjaaaaa", "ghjaabcc")]
 day11part2 = []
 
 day12part1 = []
