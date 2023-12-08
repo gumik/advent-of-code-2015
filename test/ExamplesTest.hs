@@ -163,7 +163,9 @@ day13part1 = [ ("Alice would gain 54 happiness units by sitting next to Bob.\n"
              ++ "David would gain 41 happiness units by sitting next to Carol.\n", 330) ]
 day13part2 = []
 
-day14part1 = []
+day14part1 = [ ("Comet can fly 14 km/s for 10 seconds, but then must rest for 127 seconds.\n"
+             ++ "Dancer can fly 16 km/s for 11 seconds, but then must rest for 162 seconds.\n", 2660) ]
+
 day14part2 = []
 
 day15part1 = []
