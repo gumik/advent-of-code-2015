@@ -168,8 +168,10 @@ day14part1 = [ ("Comet can fly 14 km/s for 10 seconds, but then must rest for 12
 
 day14part2 = []
 
-day15part1 = []
-day15part2 = []
+day15part1 = [ ("Butterscotch: capacity -1, durability -2, flavor 6, texture 3, calories 8\n"
+             ++ "Cinnamon: capacity 2, durability 3, flavor -2, texture -1, calories 3\n", 62842880) ]
+day15part2 = [ ("Butterscotch: capacity -1, durability -2, flavor 6, texture 3, calories 8\n"
+             ++ "Cinnamon: capacity 2, durability 3, flavor -2, texture -1, calories 3\n", 57600000) ]
 
 day16part1 = []
 day16part2 = []
