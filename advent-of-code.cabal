@@ -60,6 +60,7 @@ library
     , base
     , bytestring
     , containers
+    , extra
     , mtl
     , split
   default-language: Haskell2010

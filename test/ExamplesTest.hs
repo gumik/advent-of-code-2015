@@ -26,6 +26,7 @@ import qualified Day22
 import qualified Day23
 import qualified Day24
 import qualified Day25
+import Control.Arrow (first)
 
 
 -- cases format is as follows:
@@ -182,8 +183,32 @@ day17part2 = []
 day18part1 = []
 day18part2 = []
 
-day19part1 = []
-day19part2 = []
+day19part1 = map (first unlines) [
+               ([ "H => HO"
+                , "H => OH"
+                , "O => HH"
+                , ""
+                , "HOH" ], 4)
+             , ([ "H => HO"
+                , "H => OH"
+                , "O => HH"
+                , ""
+                , "HOHOHO" ], 7) ]
+day19part2 = map (first unlines) [
+               ([ "e => H"
+                , "e => O"
+                , "H => HO"
+                , "H => OH"
+                , "O => HH"
+                , ""
+                , "HOH" ], 3)
+              ,([ "e => H"
+                , "e => O"
+                , "H => HO"
+                , "H => OH"
+                , "O => HH"
+                , ""
+                , "HOHOHO" ], 6) ]
 
 day20part1 = []
 day20part2 = []
