@@ -5,7 +5,7 @@ import Data.ByteString.Char8 as BS (pack)
 import Distribution.Utils.MD5 (md5)
 import Control.Arrow (second)
 
-solution = Solution "day04" "The Ideal Stocking Stuffer" run
+solution = Solution "day04" run
 
 run input = (part1 hashes, part2 hashes) where
     hashes = getHashes $ inputs input

@@ -4,7 +4,7 @@ import Common (Solution(Solution), NoSolution(..), readNum)
 import Data.List.Split (splitOn)
 import Data.List (sort)
 
-solution = Solution "day02" "I Was Told There Would Be No Math" run
+solution = Solution "day02" run
 
 run input = (part1 $ parse input, part2 $ parse input)
 

@@ -9,7 +9,7 @@ import qualified Data.Map.Strict as M
 import Data.Word (Word16)
 import Control.Monad.State
 
-solution = Solution "day07" "Some Assembly Required" run
+solution = Solution "day07" run
 
 run input = let
     circuit = parse input

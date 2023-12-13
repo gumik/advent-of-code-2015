@@ -6,7 +6,7 @@ import Data.List (transpose)
 import qualified Data.Map.Strict as M
 import GHC.Real (underflowError)
 
-solution = Solution "day14" "" run
+solution = Solution "day14" run
 
 run input = (part1 reinders, part2 reinders) where
     reinders = parse input

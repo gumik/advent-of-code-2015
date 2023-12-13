@@ -4,7 +4,7 @@ import Common (Solution(Solution), NoSolution(..), readNum)
 import qualified Data.Map.Strict as M
 import Data.List (singleton)
 
-solution = Solution "day05" "Doesn't He Have Intern-Elves For This?" run
+solution = Solution "day05" run
 
 run input = (part1 splitted, part2 splitted) where
     splitted = words input

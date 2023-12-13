@@ -4,7 +4,7 @@ import Common (Solution(Solution), NoSolution(..), readNum)
 import Data.List.Split (splitOn)
 import qualified Data.Map.Strict as M
 
-solution = Solution "day06" "Probably a Fire Hazard" run
+solution = Solution "day06" run
 
 run input = (part1 instructions, part2 instructions) where
     instructions = parse input
@@ -19,7 +19,7 @@ parse = map parseLine . lines
 
 parseLine :: String -> Command
 parseLine s = case splitted of
-    "turn":"off":rest -> (TurnOff, parseRectangle rest) 
+    "turn":"off":rest -> (TurnOff, parseRectangle rest)
     "turn":"on":rest  -> (TurnOn, parseRectangle rest)
     "toggle":rest     -> (Toggle, parseRectangle rest)
     _                 -> error $ "Invalid input: '" ++ s ++ "'"

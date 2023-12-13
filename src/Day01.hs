@@ -2,7 +2,7 @@ module Day01 ( solution ) where
 
 import Common (Solution(Solution), NoSolution(..), readNum)
 
-solution = Solution "day01" "Not Quite Lisp" run
+solution = Solution "day01" run
 
 run input = (part1 input, part2 input)
 

@@ -1,9 +1,9 @@
 module Day11 ( solution ) where
 
-import Common (Solution(Solution), NoSolution(..), readNum)
+import Common (Solution(Solution), NoSolution(..), readNum, ShowString (ShowString))
 import Data.Char (ord, chr)
 
-solution = Solution "day11" "Corporate Policy" run
+solution = Solution "day11" run
 
 run input = (pass1, pass2) where
     password = head $ lines input

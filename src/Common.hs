@@ -19,7 +19,6 @@ import Data.Array
 
 data Solution a b = Solution {
     solutionName :: String,
-    solutionDescription :: String,
     solutionRun :: String -> (a, b)
 }
 

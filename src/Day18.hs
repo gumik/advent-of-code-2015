@@ -4,7 +4,7 @@ import Common (Solution(Solution), NoSolution(..), readNum, parseArray, inArrayB
 import qualified Data.Map.Strict as M
 import Data.Array (Array, assocs, (//), (!), elems, bounds)
 
-solution = Solution "day18" "" run
+solution = Solution "day18" run
 
 run input = (part1 lights, part2 lights) where
     lights = parse input

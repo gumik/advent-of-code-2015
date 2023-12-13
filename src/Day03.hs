@@ -4,7 +4,7 @@ module Day03 ( solution ) where
 import Common (Solution(Solution), NoSolution(..), readNum)
 import qualified Data.Map.Strict as M
 
-solution = Solution "day03" "Perfectly Spherical Houses in a Vacuum" run
+solution = Solution "day03" run
 
 run input = (part1 input, part2 input)
 

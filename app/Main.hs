@@ -43,13 +43,12 @@ main = do
 runSolution :: Maybe String -> Solution String String -> IO ()
 runSolution otherInput solution = do
     let name = solutionName solution
-        description = solutionDescription solution
         inputPrefix = maybe "" ("-" ++) otherInput
         inputFile = "data/" ++ name ++ inputPrefix ++ "-input" ++ ".txt"
 
     input <- readFile inputFile
 
-    putStrLn $ name ++ " - " ++ description
+    putStrLn name
     let (output1, output2) = solutionRun solution input
     putStrLn $ showSolution output1
     putStrLn $ showSolution output2
@@ -83,7 +82,7 @@ solutions = [
     stringSolution Day25.solution]
 
 stringSolution :: (Show a1, Show a2) => Solution a1 a2 -> Solution String String
-stringSolution (Solution name desc run) = Solution name desc (bimap show show . run)
+stringSolution (Solution name run) = Solution name (bimap show show . run)
 
 showSolution :: String -> String
 showSolution = intercalate "\n" . map ("    " ++) . splitOn "\n"

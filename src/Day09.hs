@@ -6,7 +6,7 @@ import Data.List.Split (splitOn)
 import Debug.Trace (traceShow)
 import Data.List (nub, permutations)
 
-solution = Solution "day09" "All in a Single Night" run
+solution = Solution "day09" run
 
 run input = solve $ parse input
 

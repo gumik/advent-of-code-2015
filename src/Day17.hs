@@ -6,7 +6,7 @@ import Control.Arrow (Arrow(first))
 import Data.Ord (comparing, Down (Down))
 import Debug.Trace (traceShow, trace)
 
-solution = Solution "day17" "" run
+solution = Solution "day17" run
 
 run = solve . parse
 

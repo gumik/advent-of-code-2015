@@ -5,7 +5,7 @@ import Data.List.Split (splitOn)
 import Data.List (transpose)
 import Control.Arrow ((&&&))
 
-solution = Solution "day15" "Day 15: Science for Hungry People" run
+solution = Solution "day15" run
 
 run input = (part1 possibleScores, part2 possibleScores) where
     ingredients = parse input

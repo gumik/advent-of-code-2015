@@ -9,7 +9,7 @@ import Control.Monad.State
 import Data.Maybe (fromJust)
 import Data.Bifunctor (second)
 
-solution = Solution "day12" "JSAbacusFramework.io" run
+solution = Solution "day12" run
 
 run input = (part1 input, part2 input)
 

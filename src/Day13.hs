@@ -6,7 +6,7 @@ import Data.List.Split (splitOn)
 import Debug.Trace (traceShow)
 import Data.List (nub, permutations)
 
-solution = Solution "day13" "Knights of the Dinner Table" run
+solution = Solution "day13" run
 
 run input = (part1 happinessTable, part2 happinessTable) where
     happinessTable = parse input

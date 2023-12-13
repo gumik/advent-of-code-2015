@@ -11,7 +11,7 @@ import qualified Data.Map.Strict as M
 import Debug.Trace (trace)
 import Distribution.Compat.Prelude (traceShow)
 
-solution = Solution "day19" "" run
+solution = Solution "day19" run
 
 run input = (part1 parsedInput, part2 parsedInput) where
     parsedInput = parse input

@@ -2,7 +2,7 @@ module Day20 ( solution, presents, divisors ) where
 
 import Common (Solution(Solution), NoSolution(..), readNum)
 
-solution = Solution "day20" "" run
+solution = Solution "day20" run
 
 run input = (part1 n, part2 n) where
     n = readNum input

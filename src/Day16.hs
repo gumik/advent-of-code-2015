@@ -4,7 +4,7 @@ import Common (Solution(Solution), NoSolution(..), readNum)
 import qualified Data.Map.Strict as M
 import Data.List.Split (splitOn)
 
-solution = Solution "day16" "" run
+solution = Solution "day16" run
 
 run input = (part1 aunts, part2 aunts) where
     aunts = parse input
