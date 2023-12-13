@@ -210,7 +210,7 @@ day19part2 = map (first unlines) [
                 , ""
                 , "HOHOHO" ], 6) ]
 
-day20part1 = []
+day20part1 = [("100", 6), ("120", 6), ("121", 8)]
 day20part2 = []
 
 day21part1 = []
