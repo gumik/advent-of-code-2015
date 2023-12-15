@@ -53,7 +53,7 @@ tests = TestLabel "InputTest" $ test
     , inputTest Day18.solution (814, 924)
     , inputTest Day19.solution (518, 200)
     , inputTest Day20.solution (831600, 884520)
-    , inputTest Day21.solution (78, NoSolution)
+    , inputTest Day21.solution (78, 148)
     , inputTest Day22.solution (NoSolution, NoSolution)
     , inputTest Day23.solution (NoSolution, NoSolution)
     , inputTest Day24.solution (NoSolution, NoSolution)
